@@ -4,6 +4,7 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     if (password == entry) {
         basic.showIcon(IconNames.Yes)
+        pins.servoWritePin(AnalogPin.P0, 90)
     } else {
         basic.showIcon(IconNames.No)
     }
@@ -18,6 +19,7 @@ let entry = ""
 let password = ""
 password = "AABAA"
 entry = ""
+pins.servoWritePin(AnalogPin.P0, 0)
 basic.forever(function () {
 	
 })
